@@ -7,17 +7,16 @@ import streamlit as st
 df = pd.read_csv('df.csv')
 st.set_page_config(layout="wide")
 
-col1, col2 = st.columns((3,1))
-
 st.sidebar.title('Dengue Fieber')
-
-
 y_value = st.sidebar.selectbox('Y-Daten', sorted(df),key=1)
 x_value = st.sidebar.selectbox('X-Daten', sorted(df),index=1,key=2)
 st.sidebar.markdown("""---""")
 y_value_2 = st.sidebar.selectbox('Y-Daten', sorted(df),index= 18, key=3)
 x_value_2 = st.sidebar.selectbox('X-Daten ', sorted(df),index=17, key=4)
+st.sidebar.markdown("""---""")
 st.sidebar.text('von Nicolai Schleinkofer')
+
+col1, col2 = st.columns((3,1))
 
 df_show = df[[str(x_value) ,str(y_value)]]
 col2.dataframe(df_show)
