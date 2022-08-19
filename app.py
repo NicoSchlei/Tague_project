@@ -10,6 +10,7 @@ st.set_page_config(layout="wide")
 col1, col2 = st.columns((3,1))
 
 st.sidebar.title('Dengue Fieber')
+st.sidebar.text('von Nicolai Schleinkofer')
 
 y_value = st.sidebar.selectbox('Y-Daten', sorted(df),key=1)
 x_value = st.sidebar.selectbox('X-Daten', sorted(df),index=1,key=2)
