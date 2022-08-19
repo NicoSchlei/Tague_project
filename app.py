@@ -10,10 +10,14 @@ st.set_page_config(layout="wide")
 col1, col2 = st.columns((3,1))
 
 st.sidebar.title('Dengue Fieber')
-st.sidebar.text('von Nicolai Schleinkofer')
+
 
 y_value = st.sidebar.selectbox('Y-Daten', sorted(df),key=1)
 x_value = st.sidebar.selectbox('X-Daten', sorted(df),index=1,key=2)
+st.sidebar.markdown("""---""")
+y_value_2 = st.sidebar.selectbox('Y-Daten', sorted(df),index= 18, key=3)
+x_value_2 = st.sidebar.selectbox('X-Daten ', sorted(df),index=17, key=4)
+st.sidebar.text('von Nicolai Schleinkofer')
 
 df_show = df[[str(x_value) ,str(y_value)]]
 col2.dataframe(df_show)
@@ -37,12 +41,6 @@ line_fig.update_layout({ 'plot_bgcolor': 'rgba(0, 0, 0, 0)', 'paper_bgcolor': 'r
 col1.plotly_chart(line_fig,  use_container_width=True)
 
 st.markdown("""---""")
-
-
-st.sidebar.markdown("""---""")
-
-y_value_2 = st.sidebar.selectbox('Y-Daten', sorted(df),index= 18, key=3)
-x_value_2 = st.sidebar.selectbox('X-Daten ', sorted(df),index=17, key=4)
 
 col1, col2 = st.columns((3,1))
 
