@@ -46,7 +46,7 @@ x_value_2 = st.sidebar.selectbox('X-Daten ', sorted(df),index=17, key=4)
 col1, col2 = st.columns((3,1))
 
 df_show_2 = df[[str(x_value_2) ,str(y_value_2)]]
-col2.dataframe(df_show_2, width=8)
+col2.dataframe(df_show_2, width=20)
 line_fig_2 = px.scatter(df,
                     x=x_value_2,
                     y=y_value_2,
