@@ -18,6 +18,8 @@ st.sidebar.text('von Nicolai Schleinkofer')
 
 col1, col2 = st.columns((3,1))
 
+st.title('Analyse der Dengue-Fieber Fälle in San Juan und Iquitos')
+
 df_show = df[[str(x_value) ,str(y_value)]]
 col2.dataframe(df_show)
 line_fig = px.scatter(df,
