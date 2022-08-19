@@ -7,7 +7,7 @@ import streamlit as st
 df = pd.read_csv('df.csv')
 st.set_page_config(layout="wide")
 
-st.sidebar.title('Dengue Fieber')
+#st.sidebar.title('Dengue Fieber')
 y_value = st.sidebar.selectbox('Y-Daten', sorted(df),key=1)
 x_value = st.sidebar.selectbox('X-Daten', sorted(df),index=1,key=2)
 st.sidebar.markdown("""---""")
